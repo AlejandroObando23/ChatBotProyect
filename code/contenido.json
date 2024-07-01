@@ -1,0 +1,19 @@
+{"contenido":[
+    {"tag":"saludo",
+            "patrones":["hola", "un saludo", "hello"],
+            "respuestas":["hola que tal!","Como te va?", "Un gusto de verte"]
+},
+{"tag":"despedida",
+"patrones":["adios", "hasta la proxima","nos vemos"],
+"respuestas":["cuidate", "nos vemos pronto", "te estare espereando"]
+
+},
+{"tag":"Conjuncion_D",
+"patrones":["Conjuncion", "Que es conjuncion","conjuncion"],
+"respuestas":["proposición que es verdadera cuando p y q son verdaderas, y falsa en cualquier otro caso"]
+
+}
+]
+}
+
+
