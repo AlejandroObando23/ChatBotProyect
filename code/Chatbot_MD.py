@@ -81,6 +81,7 @@ def mainBot():
                 if palabra == palabraIndividual:
                     cubeta[i]= 1
         resultados = modelo.predict([numpy.array(cubeta)])
+        print(resultados)
         resultadosIndices = numpy.argmax(resultados)
         tag = tags[resultadosIndices]
 

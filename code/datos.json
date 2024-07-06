@@ -9,11 +9,15 @@
     },
     {
       "pregunta": "como estas?",
-      "respuesta": ["bien, muchas gracias"]
+      "respuesta": [
+        "bien, muchas gracias"
+      ]
     },
     {
       "pregunta": "que estas haciendo",
-      "respuesta": ["buscando respuestas para sus preguntas"]
+      "respuesta": [
+        "buscando respuestas para sus preguntas"
+      ]
     },
     {
       "pregunta": "que haces",
@@ -21,28 +25,56 @@
     },
     {
       "pregunta": "quienes te crearon",
-      "respuesta": ["mis programadores osn unos talentosos estudiantes de Modelos discretos"]
+      "respuesta": [
+        "mis programadores osn unos talentosos estudiantes de Modelos discretos"
+      ]
     },
     {
       "pregunta": "que hubo",
-      "respuesta": ["hola, como te encuentras hoy"]
+      "respuesta": [
+        "hola, como te encuentras hoy"
+      ]
     },
     {
       "pregunta": "bien",
-      "respuesta": ["me alegro mucho"]
+      "respuesta": [
+        "me alegro mucho"
+      ]
     },
     {
       "pregunta": "cual es tu nombre",
-      "respuesta": ["soy un chatbot "]
+      "respuesta": [
+        "soy un chatbot "
+      ]
     },
     {
       "pregunta": "que es un auto",
-      "respuesta": ["un autom\u00f3vil o coche, es un veh\u00edculo mec\u00e1nico de propulsi\u00f3n propia destinado al transporte de personas, generalmente con cuatro ruedas y capacidad entre una y nueve plazas. Las ruedas \"delanteras\" pueden moverse hacia los lados para permitir giros y tomar las curvas."]
+      "respuesta": [
+        "un autom\u00f3vil o coche, es un veh\u00edculo mec\u00e1nico de propulsi\u00f3n propia destinado al transporte de personas, generalmente con cuatro ruedas y capacidad entre una y nueve plazas. Las ruedas \"delanteras\" pueden moverse hacia los lados para permitir giros y tomar las curvas."
+      ]
     },
     {
       "pregunta": "que piensas del calentamiento global",
       "respuesta": [
         "vamos a morir pipipi"
+      ]
+    },
+    {
+      "pregunta": "Que es conjuncion?",
+      "respuesta": [
+        "La conjunci\u00f3n es un operador, que act\u00faa sobre dos valores de verdad. Si ambos son verdaderos sera verdadero, caso controrio lo demas sera falso."
+      ]
+    },
+    {
+      "pregunta": "disyuncion",
+      "respuesta": [
+        "La disyunci\u00f3n es un operador l\u00f3gico que act\u00faa sobre dos valores de verdad, t\u00edpicamente los valores de verdad de dos proposiciones devolviendo el valor de verdad, solo si ambos son falsos el resultado sera falso."
+      ]
+    },
+    {
+      "pregunta": "condicional",
+      "respuesta": [
+        "cd c:/Users/hp/Desktop/Repositorios_en_Github/ProyectChatBot/ChatBotProyect/code"
       ]
     }
   ]

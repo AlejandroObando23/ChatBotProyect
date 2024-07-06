@@ -1,4 +1,5 @@
 import json
+import difflib
 from difflib import get_close_matches
 from typing import List, Union
 import pyttsx3
@@ -23,6 +24,9 @@ def guardarBase(file_path:str, data: dict):
 
 def encontrarMejorRespuesta(cadena: str, preguntas: "list[str]") -> Union[str,None]:
     matches: list = get_close_matches(cadena, preguntas, n = 1, cutoff = 0.6)
+  #  for match in preguntas:
+      # similarity = difflib.SequenceMatcher(None, cadena, match).ratio()
+    #    print(f"Palabra: {match}, Similitud: {similarity * 100:.2f}%")
     return matches[0] if matches else None
 
 def obtenerRespuesta(pregunta: str, datosBase: dict) -> Union[str,None]:
