@@ -1,0 +1,55 @@
+{
+  "preguntas": [
+    {
+      "pregunta": "hola",
+      "respuesta": [
+        "que tal",
+        "Hola, como estas?"
+      ]
+    },
+    {
+      "pregunta": "como estas?",
+      "respuesta": "bien, muchas gracias"
+    },
+    {
+      "pregunta": "que estas haciendo",
+      "respuesta": "buscando respuestas para sus preguntas"
+    },
+    {
+      "pregunta": "que haces",
+      "respuesta": "estoy prosesando informaci\u00f3n para usted"
+    },
+    {
+      "pregunta": "quienes te crearon",
+      "respuesta": "mis programadores osn unos talentosos estudiantes de Modelos discretos"
+    },
+    {
+      "pregunta": "que hubo",
+      "respuesta": "hola, como te encuentras hoy"
+    },
+    {
+      "pregunta": "bien",
+      "respuesta": "me alegro mucho"
+    },
+    {
+      "pregunta": "cual es tu nombre",
+      "respuesta": "soy un chatbot "
+    },
+    {
+      "pregunta": "que es un auto",
+      "respuesta": "un autom\u00f3vil o coche, es un veh\u00edculo mec\u00e1nico de propulsi\u00f3n propia destinado al transporte de personas, generalmente con cuatro ruedas y capacidad entre una y nueve plazas. Las ruedas \"delanteras\" pueden moverse hacia los lados para permitir giros y tomar las curvas."
+    },
+    {
+      "pregunta": [
+        "que piensas del cambio climatico"
+      ],
+      "respuesta": "es perjudicial para la salud"
+    },
+    {
+      "pregunta": "que piensas del calentamiento global",
+      "respuesta": [
+        "vamos a morir pipipi"
+      ]
+    }
+  ]
+}
