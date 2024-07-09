@@ -124,6 +124,36 @@
       "respuesta": [
         "Proposicion compuesta que en la tabla de verdad resulta verdadera en todos los casos"
       ]
+    },
+    {
+      "pregunta": "condicional",
+      "respuesta": [
+        "El condicional es un operador que actua sobre los dos valores de verdad, en la que si p es verdadero y q es falso su resultado sera falso y los demas verdadero"
+      ]
+    },
+    {
+      "pregunta": "contradiccion",
+      "respuesta": [
+        "Proposicion compuesta que en la tabla de verdad resulta falso en todos los casos"
+      ]
+    },
+    {
+      "pregunta": "contingencia",
+      "respuesta": [
+        "Proposicion compuesta que en la tabla de verdad resulta verdadero y falso en todos los casos"
+      ]
+    },
+    {
+      "pregunta": "quiero que me ayudes a desarrollar una tabla de verdad",
+      "respuesta": [
+        "Esta bien. Para que te ayude a desarrollar las tablas de verdad ingresa \"desarrollo tabla\""
+      ]
+    },
+    {
+      "pregunta": "quiero salir del chatbot",
+      "respuesta": [
+        "Esta bien. Para salir escribe \"salir\""
+      ]
     }
   ]
 }
