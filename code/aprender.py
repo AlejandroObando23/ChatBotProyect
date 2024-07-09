@@ -23,7 +23,7 @@ def guardarBase(file_path:str, data: dict):
         json.dump(data, file, indent=2)
 
 def encontrarMejorRespuesta(cadena: str, preguntas: "list[str]") -> Union[str,None]:
-    matches: list = get_close_matches(cadena, preguntas, n = 1, cutoff = 0.6)
+    matches: list = get_close_matches(cadena, preguntas, n = 1, cutoff = 0.75)
   #  for match in preguntas:
       # similarity = difflib.SequenceMatcher(None, cadena, match).ratio()
     #    print(f"Palabra: {match}, Similitud: {similarity * 100:.2f}%")
@@ -40,6 +40,7 @@ def chat_bot():
 
     while True:
         user_input: str = input("You: ")
+        user_input = user_input.lower()
         if user_input.lower() == "salir":
             break
 

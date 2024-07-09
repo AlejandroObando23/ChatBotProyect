@@ -72,9 +72,57 @@
       ]
     },
     {
-      "pregunta": "condicional",
+      "pregunta": "HOLA",
       "respuesta": [
-        "cd c:/Users/hp/Desktop/Repositorios_en_Github/ProyectChatBot/ChatBotProyect/code"
+        "como estas"
+      ]
+    },
+    {
+      "pregunta": "quien eres tu?",
+      "respuesta": [
+        "Soy un ChatBot que te ayuda con tus dudas sobre la logica proposicional. Mis funciones son desarrolar tablas de verdad y consultor de conceptos sobre logica proposicional, conectores Logicos y mas."
+      ]
+    },
+    {
+      "pregunta": "que es disyuncion?",
+      "respuesta": [
+        "La disyuncion es un operador que actua sobre dos valores de verdad, tipicamente los valores de verdad, solo si ambos son falsos el resultado sera falso"
+      ]
+    },
+    {
+      "pregunta": "que es bicondicional?",
+      "respuesta": [
+        "Es aquel conectivo logico que cumple cuando p y q son iguales el resultado sera verdadero y lo demas sera falso"
+      ]
+    },
+    {
+      "pregunta": "conjuncion",
+      "respuesta": [
+        "La conjuncion es un operador, que actua sobre dos valores de verdad. Si ambos son verdaderos sera verdadero, caso contrario lo demas sera falso"
+      ]
+    },
+    {
+      "pregunta": "bien y tu",
+      "respuesta": [
+        "Estoy bien gracias por preguntar :)"
+      ]
+    },
+    {
+      "pregunta": "disyuncion excluyente",
+      "respuesta": [
+        "Es aquel conectivo logico que se cumple cuando p y q son iguales, en ese caso su resultado es falso y lo demas verdadero"
+      ]
+    },
+    {
+      "pregunta": "tautologia",
+      "respuesta": [
+        "Proposicion compuesta que en la tabla de verdad resulta verdadera en todos los casos"
+      ]
+    },
+    {
+      "pregunta": "que es tautologia",
+      "respuesta": [
+        "Proposicion compuesta que en la tabla de verdad resulta verdadera en todos los casos"
       ]
     }
   ]
