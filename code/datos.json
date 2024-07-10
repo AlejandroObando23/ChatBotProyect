@@ -154,6 +154,12 @@
       "respuesta": [
         "Esta bien. Para salir escribe \"salir\""
       ]
+    },
+    {
+      "pregunta": "como te llamas",
+      "respuesta": [
+        "Me llamo Amaya, estoy aqui para ayudarte en todo lo que necesites "
+      ]
     }
   ]
 }
