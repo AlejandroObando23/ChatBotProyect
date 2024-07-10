@@ -35,13 +35,14 @@ def obtenerRespuesta(pregunta: str, datosBase: dict) -> Union[str,None]:
             respuesta = q["respuesta"]
             return random.choice(respuesta)
         
-def chat_bot():
+def chat_bot(user_input):
     datosBase: dict = cargarBase("datos.json")
 
     while True:
-        user_input: str = input("You: ")
+        
         user_input = user_input.lower()
         if user_input.lower() == "salir":
+            answer="Bot: Adios"
             print("Bot: Adios")
             leerTexto("Adios")
             break
@@ -51,16 +52,19 @@ def chat_bot():
         if best_match:
             answer: str = obtenerRespuesta(best_match, datosBase)
             print(f"Bot: {answer}")
+            return answer
             leerTexto(answer)
         else:
             print("Bot: No conosco la respuesta, me enseñas?")
+            answer="Bot: No conosco la respuesta, me enseñas?"
             leerTexto("No conosco la respuesta, me enseñas?")
-            new_answer: str = input("Escribe la respuesta o escribe 'omitir' para omitir: ")
+            answer="Escribe la respuesta o escribe 'omitir' para omitir: "
+            leerTexto("No conosco la respuesta, me enseñas?")
+            
 
-            if new_answer.lower() != "omitir":
+            if user_input.lower() != "omitir":
                 datosBase["preguntas"].append({"pregunta": user_input, "respuesta": [new_answer]})
                 guardarBase("datos.json", datosBase)
                 print("Gracias por enseñarme")
+        
 
-
-chat_bot()

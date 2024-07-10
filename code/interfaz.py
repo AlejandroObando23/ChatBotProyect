@@ -1,4 +1,5 @@
 from tkinter import *
+import aprender
 
 def Abrir_ventana():
     ventana= Toplevel(raiz)
@@ -16,10 +17,11 @@ def Abrir_ventana():
 
 def enviar_Mensaje(chat_area, mensaje_entrada):
     mensaje_usuario = mensaje_entrada.get()
+    mensaje_bot= aprender.chat_bot(mensaje_usuario)
     if mensaje_usuario.strip():
         chat_area.insert(END, "Tú: " + mensaje_usuario + "\n")
         mensaje_entrada.delete(0, END)
-        chat_area.insert(END, "Amaya: Este es un mensaje de respuesta.\n")
+        chat_area.insert(END, "Bot: " + mensaje_bot +"\n")
         chat_area.see(END)
 
 raiz = Tk()
