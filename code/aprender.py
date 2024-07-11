@@ -34,7 +34,19 @@ def obtenerRespuesta(pregunta: str, datosBase: dict) -> Union[str,None]:
         if q["pregunta"] == pregunta:
             respuesta = q["respuesta"]
             return random.choice(respuesta)
-        
+def respuesta_noconocida(user_input, user_before):
+    datosBase: dict = cargarBase("datos.json")
+    if user_input.lower() != "omitir":
+        datosBase["preguntas"].append({"pregunta": user_before, "respuesta": [user_input]})
+        guardarBase("datos.json", datosBase)
+        print("Gracias por enseñarme")
+        answer="Gracias por enseñarme"
+        return answer
+    else:
+        answer="OK"
+        return answer
+
+           
 def chat_bot(user_input):
     datosBase: dict = cargarBase("datos.json")
 
@@ -52,19 +64,14 @@ def chat_bot(user_input):
         if best_match:
             answer: str = obtenerRespuesta(best_match, datosBase)
             print(f"Bot: {answer}")
-            return answer
             leerTexto(answer)
+            return answer
+            
         else:
             print("Bot: No conosco la respuesta, me enseñas?")
-            answer="Bot: No conosco la respuesta, me enseñas?"
-            leerTexto("No conosco la respuesta, me enseñas?")
-            answer="Escribe la respuesta o escribe 'omitir' para omitir: "
-            leerTexto("No conosco la respuesta, me enseñas?")
-            
+            answer="Bot: No conosco la respuesta, me enseñas? Escribe la respuesta o escribe 'omitir' para omitir: "
+            leerTexto("No conosco la respuesta, me enseñas? Escribe la respuesta o escribe 'omitir' para omitir: ")
+            return "falso"
 
-            if user_input.lower() != "omitir":
-                datosBase["preguntas"].append({"pregunta": user_input, "respuesta": [new_answer]})
-                guardarBase("datos.json", datosBase)
-                print("Gracias por enseñarme")
         
 

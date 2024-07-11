@@ -15,14 +15,43 @@ def Abrir_ventana():
     enviar_Button = Button(ventana, text="Enviar", command=lambda: enviar_Mensaje(area_Mensaje, mensaje_entrada))
     enviar_Button.pack(side=LEFT, padx=10, pady=10)
 
-def enviar_Mensaje(chat_area, mensaje_entrada):
-    mensaje_usuario = mensaje_entrada.get()
-    mensaje_bot= aprender.chat_bot(mensaje_usuario)
-    if mensaje_usuario.strip():
-        chat_area.insert(END, "Tú: " + mensaje_usuario + "\n")
-        mensaje_entrada.delete(0, END)
-        chat_area.insert(END, "Bot: " + mensaje_bot +"\n")
-        chat_area.see(END)
+
+    def enviar_Mensaje(chat_area, mensaje_entrada):
+        mensaje_usuario = mensaje_entrada.get()
+        mensaje_bot= aprender.chat_bot(mensaje_usuario)
+
+        if mensaje_usuario.strip():
+            chat_area.insert(END, "Tú: " + mensaje_usuario + "\n")
+            mensaje_entrada.delete(0, END)
+            if mensaje_bot=="falso":
+                chat_area.insert(END, "Bot: " + "No conosco la respuesta, me enseñas? Escribe la respuesta o escribe 'omitir' para omitir:" +"\n")
+                chat_area.see(END)
+                mensaje_anterior=mensaje_usuario
+                enviar_Button.pack_forget()
+                enviar_Button2 = Button(ventana, text="Enviar", command=lambda: retroalimentacion(chat_area, mensaje_entrada, mensaje_usuario))
+                enviar_Button2.pack(side=LEFT, padx=10, pady=10)
+            else:
+                chat_area.insert(END, "Bot: " + mensaje_bot +"\n")
+                chat_area.see(END)
+            def retroalimentacion(chat_area, mensaje_entrada, mensaje_anterior):
+                mensaje_usuario = mensaje_entrada.get()
+                mensaje_bot= aprender.respuesta_noconocida(mensaje_usuario,mensaje_anterior)
+                if mensaje_usuario.strip():
+                    chat_area.insert(END, "Tú: " + mensaje_usuario + "\n")
+                    mensaje_entrada.delete(0, END)   
+                    chat_area.insert(END, "Bot: " + mensaje_bot +"\n")
+                    chat_area.see(END)
+                enviar_Button2.pack_forget()
+                enviar_Button.pack(side=LEFT, padx=10, pady=10)
+
+
+    
+
+
+
+
+
+
 
 raiz = Tk()
 raiz.title("Chat Bot")
