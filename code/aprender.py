@@ -56,7 +56,7 @@ def chat_bot(user_input):
         if user_input.lower() == "salir":
             answer="Bot: Adios"
             print("Bot: Adios")
-            leerTexto("Adios")
+          #  leerTexto("Adios")
             break
 
         best_match: Union[str,None] = encontrarMejorRespuesta(user_input, [q["pregunta"] for q in datosBase["preguntas"]])
@@ -64,13 +64,13 @@ def chat_bot(user_input):
         if best_match:
             answer: str = obtenerRespuesta(best_match, datosBase)
             print(f"Bot: {answer}")
-            leerTexto(answer)
+           # leerTexto(answer)
             return answer
             
         else:
             print("Bot: No conosco la respuesta, me enseñas?")
             answer="Bot: No conosco la respuesta, me enseñas? Escribe la respuesta o escribe 'omitir' para omitir: "
-            leerTexto("No conosco la respuesta, me enseñas? Escribe la respuesta o escribe 'omitir' para omitir: ")
+     #       leerTexto("No conosco la respuesta, me enseñas? Escribe la respuesta o escribe 'omitir' para omitir: ")
             return "falso"
 
         
