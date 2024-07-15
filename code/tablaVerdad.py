@@ -39,7 +39,7 @@ def infijaPostfija(cadena):
 
     for caracter in cadena:
         if caracter.isalnum():
-            postfija.append(caracter)
+            postfija.append(caracter.upper())
         elif(caracter == '('):
             pila.append(caracter)
         elif(caracter == ')'):
@@ -56,6 +56,36 @@ def infijaPostfija(cadena):
 
     return postfija
 
+def evaluarPostfija(postfija):
+    a = []
+    b = []
+    resultado = []
+    pila = deque()
+
+    for char in postfija:
+        if not esOperador(char):
+            pila.append(char)
+        else:
+             b = pila.pop()
+             a = pila.pop()
+             resultado = operacion(a,b,char)
+             pila.append(resultado)
+
+def operacion(a,b,caracter):
+    if(caracter == '~'):
+        pass
+    elif(caracter == '∧'):
+        return 5
+    elif(caracter == '∨'):
+        return 4
+    elif(caracter == '⊕'):
+        return 3
+    elif(caracter == '→'):
+        return 2
+    elif(caracter == '↔'):
+        return 1
+    
+
 def tablaVerdad():
     print("Ingrese la sintaxis haciendo uso de paréntesis para la precedencia Ej. (A^B)→C:")
     variables = []
@@ -66,7 +96,17 @@ def tablaVerdad():
 	        variables.append(i.upper())
     
     valores_logicos = generar_valores_verdad(len(variables))
-    print(infijaPostfija(funcion))
+
+    postfija = infijaPostfija(funcion)
+    nuevaPostfija = []
+    for char in postfija:
+        if not esOperador(char):
+            index = variables.index(char)
+            nuevaPostfija.append(valores_logicos[index])
+        else:
+             nuevaPostfija.append(char)
+
+
 
 tablaVerdad()
 
