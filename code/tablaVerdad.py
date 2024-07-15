@@ -27,11 +27,15 @@ def obtenerPrecedencia(caracter):
           return 2
      elif(caracter == '↔'):
           return 1
+     else:
+         return 0
 
 def esOperador(caracter):
      caracteres ={'~', '∧','∨', '⊕', '→','↔'}
      if(caracter in caracteres):
           return True
+     else:
+         return False
 
 def infijaPostfija(cadena):
     pila = deque()
@@ -47,7 +51,7 @@ def infijaPostfija(cadena):
                  postfija.append(pila.pop())
             pila.pop()
         elif(esOperador(caracter)):
-            while(pila and obtenerPrecedencia(pila.top()) >= obtenerPrecedencia(caracter)):
+            while(pila and obtenerPrecedencia(pila[-1]) >= obtenerPrecedencia(caracter)):
                   postfija.append(pila.pop())
             pila.append(caracter)
 
@@ -63,29 +67,39 @@ def evaluarPostfija(postfija):
     pila = deque()
 
     for char in postfija:
-        if not esOperador(char):
+        if isinstance(char, list):
             pila.append(char)
+        elif(char == '~'):
+            b = pila.pop()
+            negado = []
+            negado = [not valor for valor in b]
+            pila.append(negado)
         else:
              b = pila.pop()
              a = pila.pop()
              resultado = operacion(a,b,char)
              pila.append(resultado)
+    return pila.pop()
 
 def operacion(a,b,caracter):
-    if(caracter == '~'):
-        pass
-    elif(caracter == '∧'):
-        return 5
+    resultado = []
+    if(caracter == '∧'):
+        for i in range(len(a)):
+            resultado.append(a[i] and b[i])
     elif(caracter == '∨'):
-        return 4
+        for i in range(len(a)):
+            resultado.append(a[i] or b[i])
     elif(caracter == '⊕'):
-        return 3
+        for i in range(len(a)):
+            resultado.append((a[i] and not b[i]) or (not a[i] and b[i]))
     elif(caracter == '→'):
-        return 2
+        for i in range(len(a)):
+            resultado.append(not a[i] or b[i])
     elif(caracter == '↔'):
-        return 1
+        for i in range(len(a)):
+            resultado.append(not ((a[i] and not b[i]) or (not a[i] and b[i])))
+    return resultado
     
-
 def tablaVerdad():
     print("Ingrese la sintaxis haciendo uso de paréntesis para la precedencia Ej. (A^B)→C:")
     variables = []
@@ -98,6 +112,7 @@ def tablaVerdad():
     valores_logicos = generar_valores_verdad(len(variables))
 
     postfija = infijaPostfija(funcion)
+    print(postfija)
     nuevaPostfija = []
     for char in postfija:
         if not esOperador(char):
@@ -105,7 +120,8 @@ def tablaVerdad():
             nuevaPostfija.append(valores_logicos[index])
         else:
              nuevaPostfija.append(char)
-
+    print(nuevaPostfija)
+    print(evaluarPostfija(nuevaPostfija))
 
 
 tablaVerdad()
