@@ -1,7 +1,7 @@
 from tkinter import *
 import aprender
 import pyttsx3
-#TODO Utilizar doble comando para botones y utilizar la funcion integrada a la biblioteca de tkinter on_botton_click
+
 voz = pyttsx3.init()
 voices = voz.getProperty("voices")
 voz.setProperty("voice", voices[0].id)

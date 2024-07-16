@@ -3,8 +3,8 @@
     {
       "pregunta": "hola",
       "respuesta": [
-        "que tal",
-        "Hola, como estas?"
+        "Hola soy Amaya, soy un chatbot creado para solucionar tus dudas sobre los conceptos de tablas de verdad y reglas de inferencia, ademas desarrollo tablas de verdad\nPara que desarrolle tablas de verdad escribe  TablaVerdad , caso contrario eres libre de preguntarme conceptos en los que tengas dudas "
+        
       ]
     },
     {
@@ -62,7 +62,7 @@
     {
       "pregunta": "Que es conjuncion?",
       "respuesta": [
-        "La conjunci\u00f3n es un operador, que act\u00faa sobre dos valores de verdad. Si ambos son verdaderos sera verdadero, caso controrio lo demas sera falso."
+        "La conjunci\u00f3n es un operador, que act\u00faa sobre dos valores de verdad. Si ambos son verdaderos sera verdadero, caso contrario lo demas sera falso."
       ]
     },
     {
@@ -86,7 +86,7 @@
     {
       "pregunta": "que es disyuncion?",
       "respuesta": [
-        "La disyuncion es un operador que actua sobre dos valores de verdad, tipicamente los valores de verdad, solo si ambos son falsos el resultado sera falso"
+        "La disyuncion es un operador que actua sobre dos valores de verdad, típicamente los valores de verdad de dos proposiciones, ocurre cuando ambos son falsos el resultado sera falso y el resto verdadero"
       ]
     },
     {
