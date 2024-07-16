@@ -10,8 +10,41 @@ voz.setProperty("voice", voices[0].id)
 def leerTexto(cadena):
     voz.say(cadena)
     voz.runAndWait()
+def Abrir_Ventana2():
+    ventana_Teclado = Toplevel(raiz)
+    ventana_Teclado.title("Tabla de verdad")
+    ventana_Teclado.config(bg = "light yellow")
+    
+    area_Mensaje = Text(ventana_Teclado, wrap=WORD, width=50, height=20, bg="white")
+    area_Mensaje.pack(padx=10, pady=10)
+    
+    mensaje_entrada = Entry(ventana_Teclado, width=40)
+    mensaje_entrada.pack(side=LEFT, padx=10, pady=10)
+    def insertar_texto(texto):
+        mensaje_entrada.insert(END, texto)
+
+    # Definir las filas del teclado
+    filas = [
+        ('A', 'B', 'C', 'D', '∧', 'v', '→', '↔')
+    ]
+
+    # Crear los botones del teclado
+    for fila in filas:
+        fila_frame = Frame(ventana_Teclado)
+        fila_frame.pack(padx=10, pady=5)
+        for texto in fila:
+            Button(fila_frame, text=texto, width=3, height=1,
+                   command=lambda t=texto: insertar_texto(t)).pack(side=LEFT, padx=5, pady=5)
+            
+    enviar_button = Button(ventana_Teclado, text="Enviar", command=lambda: enviar_mensajeTabla(area_Mensaje, mensaje_entrada))
+    enviar_button.pack(pady=10)
+    def enviar_mensajeTabla(chat_area, mensaje_entrada):
+        mensaje_usuario = mensaje_entrada.get()
+        chat_area.insert(END, "Tú: " + mensaje_usuario + "\n")
+        mensaje_entrada.delete(0, END)
 
 def Abrir_ventana():
+    
     ventana= Toplevel(raiz)
     ventana.title("Amaya")
     ventana.config(bg="sky blue")
@@ -57,19 +90,10 @@ def Abrir_ventana():
                     chat_area.see(END)
                 enviar_Button2.pack_forget()
                 enviar_Button.pack(side=LEFT, padx=10, pady=10)
+
             def vozMensaje():
                 leerTexto(mensaje_bot)
         ventana.after(200, vozMensaje)
-
-        
-
-        
-
-
-    
-
-
-
 
 
 
@@ -79,7 +103,9 @@ raiz.title("Chat Bot")
 raiz.config(bg="sky blue")
 
 Label(raiz, text="Habla con Amaya", bg="sky blue", font=("courier new", 14)).pack(pady=50,padx=100)
-bonotn=Button(raiz, text="OK", command= Abrir_ventana).pack(pady=50,padx=100)
+boton=Button(raiz, text="OK", command= Abrir_ventana).pack(pady=50,padx=100)
+
+
 
 
 raiz.mainloop()
