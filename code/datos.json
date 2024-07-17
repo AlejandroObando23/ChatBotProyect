@@ -4,7 +4,6 @@
       "pregunta": "hola",
       "respuesta": [
         "Hola soy Amaya, soy un chatbot creado para solucionar tus dudas sobre los conceptos de tablas de verdad y reglas de inferencia, ademas desarrollo tablas de verdad\nPara que desarrolle tablas de verdad escribe  TablaVerdad , caso contrario eres libre de preguntarme conceptos en los que tengas dudas "
-        
       ]
     },
     {
@@ -86,7 +85,7 @@
     {
       "pregunta": "que es disyuncion?",
       "respuesta": [
-        "La disyuncion es un operador que actua sobre dos valores de verdad, típicamente los valores de verdad de dos proposiciones, ocurre cuando ambos son falsos el resultado sera falso y el resto verdadero"
+        "La disyuncion es un operador que actua sobre dos valores de verdad, t\u00c3\u00adpicamente los valores de verdad de dos proposiciones, ocurre cuando ambos son falsos el resultado sera falso y el resto verdadero"
       ]
     },
     {
@@ -159,6 +158,12 @@
       "pregunta": "como te llamas",
       "respuesta": [
         "Me llamo Amaya, estoy aqui para ayudarte en todo lo que necesites "
+      ]
+    },
+    {
+      "pregunta": "operador logico",
+      "respuesta": [
+        ""
       ]
     }
   ]
