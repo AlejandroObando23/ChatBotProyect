@@ -71,6 +71,7 @@ def Abrir_ventana():
         mensaje_usuario = mensaje_entrada.get()
         mensaje_bot= aprender.chat_bot(mensaje_usuario)
         sendvozmensaje= mensaje_bot
+        mensaje_clave=mensaje_usuario.lower()
 
         if mensaje_usuario.strip():
             chat_area.insert(END, "Tú: " + mensaje_usuario + "\n")
@@ -82,7 +83,13 @@ def Abrir_ventana():
                 enviar_Button.pack_forget()
                 enviar_Button2 = Button(ventana, text="Enviar", command=lambda:retroalimentacion(chat_area, mensaje_entrada, mensaje_usuario))
                 enviar_Button2.pack(side=LEFT, padx=10, pady=10)
-                
+            elif mensaje_clave=="tablaverdad":
+
+                chat_area.insert(END, "Bot: " + mensaje_bot +"\n")
+                chat_area.see(END)
+                Abrir_Ventana2()
+
+
             else:
                 chat_area.insert(END, "Bot: " + mensaje_bot +"\n")
                 chat_area.see(END)
@@ -100,7 +107,7 @@ def Abrir_ventana():
 
             def vozMensaje():
                 leerTexto(mensaje_bot)
-        ventana.after(200, vozMensaje)
+        ventana.after(100, vozMensaje)
 
 
 
@@ -117,7 +124,7 @@ label_imagen.pack(pady=50, padx=100)
 
 Label(raiz, text="Habla con Amaya", bg="sky blue", font=("courier new", 14)).pack(pady=10,padx=100)
 
-boton=Button(raiz, text="Comenzar", command=lambda: [Abrir_ventana(),Abrir_Ventana2()]).pack(pady=10,padx=100)
+boton=Button(raiz, text="Comenzar", command=lambda: Abrir_ventana()).pack(pady=10,padx=100)
 
 
 
