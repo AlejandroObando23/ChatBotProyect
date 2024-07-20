@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import *
 import aprender
 import pyttsx3
+import tablaVerdad
 
 voz = pyttsx3.init()
 voices = voz.getProperty("voices")
@@ -27,7 +28,7 @@ def Abrir_Ventana2():
 
     # Definir las filas del teclado
     filas = [
-        ('A', 'B', 'C', 'D', '∧', 'v', '→', '↔')
+        ('A', 'B', 'C', 'D', '∧', '∨','~', '→', '↔', ')', '(')
     ]
 
     # Crear los botones del teclado
@@ -40,15 +41,19 @@ def Abrir_Ventana2():
 
     
     mensaje_entrada = Entry(ventana_Teclado, width=40)
-    mensaje_entrada.pack(side=LEFT, fill=X, expand=True, padx=10, pady=10)   
+    mensaje_entrada.pack(side=LEFT, fill=X, expand=True, padx=10, pady=10)
+    
 
     enviar_button = Button(ventana_Teclado, text="Enviar", command=lambda: enviar_mensajeTabla(area_Mensaje, mensaje_entrada))
     enviar_button.pack(side=LEFT, padx=10,pady=10)
 
     def enviar_mensajeTabla(chat_area, mensaje_entrada):
         mensaje_usuario = mensaje_entrada.get()
+        mensaje_respuesta = tablaVerdad.tablaVerdadera(mensaje_usuario)
         chat_area.insert(END, "Tú: " + mensaje_usuario + "\n")
         mensaje_entrada.delete(0, END)
+        chat_area.insert(END,  mensaje_respuesta +"\n")
+        chat_area.see(END)
 
 def Abrir_ventana():
     

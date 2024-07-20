@@ -100,11 +100,10 @@ def operacion(a,b,caracter):
             resultado.append(not ((a[i] and not b[i]) or (not a[i] and b[i])))
     return resultado
     
-def tablaVerdad():
+def tablaVerdadera(funcion):
     print("Ingrese la sintaxis haciendo uso de paréntesis para la precedencia Ej. (A^B)→C:")
     variables = []
-    funcion = input()
-
+    
     for i in funcion:
         if (i.upper()).isalpha() and (not(i.upper() in variables)):
 	        variables.append(i.upper())
@@ -120,11 +119,13 @@ def tablaVerdad():
             nuevaPostfija.append(valores_logicos[index])
         else:
              nuevaPostfija.append(char)
-    print(nuevaPostfija)
-    print(evaluarPostfija(nuevaPostfija))
+             
+ 
+    
+    return "\n".join(map(str, evaluarPostfija(nuevaPostfija)))
 
 
-tablaVerdad()
+
 
     
 

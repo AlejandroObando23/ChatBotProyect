@@ -24,9 +24,9 @@ def guardarBase(file_path:str, data: dict):
 
 def encontrarMejorRespuesta(cadena: str, preguntas: "list[str]") -> Union[str,None]:
     matches: list = get_close_matches(cadena, preguntas, n = 1, cutoff = 0.77)
-    #for match in preguntas:
-      #similarity = difflib.SequenceMatcher(None, cadena, match).ratio()
-       #print(f"Palabra: {match}, Similitud: {similarity * 100:.2f}%")
+    for match in preguntas:
+        similarity = difflib.SequenceMatcher(None, cadena, match).ratio()
+        print(f"Palabra: {match}, Similitud: {similarity * 100:.2f}%")
     return matches[0] if matches else None
 
 def obtenerRespuesta(pregunta: str, datosBase: dict) -> Union[str,None]:

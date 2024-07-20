@@ -85,7 +85,7 @@
     {
       "pregunta": "que es disyuncion?",
       "respuesta": [
-        "La disyuncion es un operador que actua sobre dos valores de verdad, t\u00c3\u00adpicamente los valores de verdad de dos proposiciones, ocurre cuando ambos son falsos el resultado sera falso y el resto verdadero"
+        "La disyuncion es un operador que actua sobre dos valores de verdad, tipicamente los valores de verdad de dos proposiciones, ocurre cuando ambos son falsos el resultado sera falso y el resto verdadero"
       ]
     },
     {
@@ -170,6 +170,36 @@
       "pregunta": "tablaverdad",
       "respuesta": [
         "Ok. Abriendo tabla verdad"
+      ]
+    },
+    {
+      "pregunta": "negacion",
+      "respuesta": [
+        "Niega a la preposicion"
+      ]
+    },
+    {
+      "pregunta": "que es la negacion?",
+      "respuesta": [
+        "Niega a la preposicion"
+      ]
+    },
+    {
+      "pregunta": "preposicion",
+      "respuesta": [
+        "Es aquel enunciado que puede ser verdadera o falso, pero nunca los dos a la vez"
+      ]
+    },
+    {
+      "pregunta": "Que es preposicion",
+      "respuesta": [
+        "Es aquel enunciado que puede ser verdadera o falso, pero nunca los dos a la vez"
+      ]
+    },
+    {
+      "pregunta": "bicondicional?",
+      "respuesta": [
+        "Es aquel conectivo logico que cumple cuando p y q son iguales el resultado sera verdadero y lo demas sera falso"
       ]
     }
   ]
