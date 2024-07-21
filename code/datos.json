@@ -201,6 +201,24 @@
       "respuesta": [
         "Es aquel conectivo logico que cumple cuando p y q son iguales el resultado sera verdadero y lo demas sera falso"
       ]
+    },
+    {
+      "pregunta": "como puedo salir?",
+      "respuesta": [
+        "Esta bien. Para salir escribe \"salir\""
+      ]
+    },
+    {
+      "pregunta": "avion",
+      "respuesta": [
+        "Es un objeto que nos permite transportarnos en los aires de un lugar a otro"
+      ]
+    },
+    {
+      "pregunta": "Carro",
+      "respuesta": [
+        "Es un objeto que nos permite transportarnos de un lugar a otro"
+      ]
     }
   ]
 }

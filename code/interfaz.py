@@ -82,6 +82,7 @@ def Abrir_ventana():
             chat_area.insert(END, "Tú: " + mensaje_usuario + "\n")
             mensaje_entrada.delete(0, END)
             if mensaje_bot=="falso":
+                mensaje_bot="No conozco la respuesta, me enseñas? Escribe la respuesta o escribe 'omitir' para omitir:"
                 chat_area.insert(END, "Bot: " + "No conozco la respuesta, me enseñas? Escribe la respuesta o escribe 'omitir' para omitir:" +"\n")
                 chat_area.see(END)
                 mensaje_anterior=mensaje_usuario
@@ -93,7 +94,8 @@ def Abrir_ventana():
                 chat_area.insert(END, "Bot: " + mensaje_bot +"\n")
                 chat_area.see(END)
                 Abrir_Ventana2()
-
+            elif mensaje_clave=="salir":
+                raiz.destroy()
 
             else:
                 chat_area.insert(END, "Bot: " + mensaje_bot +"\n")
@@ -109,6 +111,12 @@ def Abrir_ventana():
                     chat_area.see(END)
                 enviar_Button2.pack_forget()
                 enviar_Button.pack(side=LEFT, padx=10, pady=10)
+                def subvozMensaje():
+                    leerTexto(mensaje_bot)
+                ventana.after(100, subvozMensaje)
+
+                
+                
 
             def vozMensaje():
                 leerTexto(mensaje_bot)
